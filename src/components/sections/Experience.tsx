@@ -4,7 +4,7 @@ import { experiences } from "../../data/experience";
 
 function Experience() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-24">
+    <section id="experience" className="mx-auto max-w-7xl px-6 py-24">
       <SectionTitle
         title="Career Journey"
         subtitle="My professional journey"

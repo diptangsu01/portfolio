@@ -4,7 +4,7 @@ import { socials } from "../../data/socials";
 
 function Contact() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-20">
+    <section id="contact" className="mx-auto max-w-7xl px-6 py-20">
 
       <SectionTitle
         title="Let's Connect"

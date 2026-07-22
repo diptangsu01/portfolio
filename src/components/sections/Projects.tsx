@@ -4,7 +4,7 @@ import { projects } from "../../data/projects";
 
 function Projects() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-20">
+    <section id="projects" className="mx-auto max-w-7xl px-6 py-20">
 
       <SectionTitle
         title="Enterprise Solutions"
