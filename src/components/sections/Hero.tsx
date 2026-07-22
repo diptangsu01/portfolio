@@ -5,7 +5,7 @@ import TypingText from "../common/TypingText";
 import { profile } from "../../data/profile";
 import { skills } from "../../data/skills";
 
-function Hero() {
+function Hero() { 
   return (
     // <section id="home" className="flex min-h-screen items-center pt-20 pb-12 lg:pt-20 lg:pb-20">
       <section id="home" className="relative flex min-h-screen items-center pt-20 pb-12 lg:pt-20 lg:pb-20 overflow-hidden">
