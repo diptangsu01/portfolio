@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Terminal, Search, X, ShieldCheck, Briefcase, Code, Mail, FileText, Sparkles } from 'lucide-react';
+import { Terminal, Search, X, ShieldCheck, Briefcase, Code, Mail, FileText, Sparkles, Disc } from 'lucide-react';
 import { certifications } from '../../data/certifications';
 import { experiences } from '../../data/experience';
 import { profile } from '../../data/profile';
@@ -62,6 +62,15 @@ export default function CommandPalette({ isOpen, onClose }: CommandPaletteProps)
       setTerminalOutput(`✔ Email copied to clipboard: ${profile.socials?.email || 'diptangsu.sasmal@email.com'}`);
     } else if (normalized === 'sf profile' || normalized === 'profile') {
       setTerminalOutput(`Executive Summary:\n${profile.description}`);
+    } else if (normalized === 'sf play music' || normalized === 'sf music' || normalized === 'music' || normalized === 'play') {
+      setTerminalOutput(
+        `🎵 [2050 AUDIO GATEWAY] Connecting to Diptangsu's Curated Music Portal...\n` +
+        `➜ Target: https://music.diptangsu.in\n` +
+        `➜ Status: 200 OK | Audio Stream: Active`
+      );
+      setTimeout(() => {
+        window.open('https://music.diptangsu.in', '_blank');
+      }, 1000);
     } else if (normalized === 'clear') {
       setTerminalOutput(null);
     } else {
@@ -70,6 +79,15 @@ export default function CommandPalette({ isOpen, onClose }: CommandPaletteProps)
   };
 
   const commandItems = [
+    {
+      id: 'music',
+      title: 'sf play music',
+      subtitle: 'Launch Diptangsu\'s Curated Spotify Portal (music.diptangsu.in)',
+      icon: Disc,
+      action: () => {
+        executeCommand('sf play music');
+      }
+    },
     {
       id: 'certs',
       title: 'sf certs --list',

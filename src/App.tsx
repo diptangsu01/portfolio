@@ -3,6 +3,7 @@ import Navbar from './components/layout/Navbar';
 import AmbientBackground from './components/common/AmbientBackground';
 import CommandPalette from './components/common/CommandPalette';
 import SpecInspectorModal from './components/common/SpecInspectorModal';
+import MusicVinylBadge from './components/common/MusicVinylBadge';
 import Hero from './components/sections/Hero';
 import StatsBar from './components/sections/StatsBar';
 import Experience from './components/sections/Experience';
@@ -60,6 +61,9 @@ export default function App() {
 
       {/* Footer */}
       <Footer />
+
+      {/* Floating Music Vinyl Badge Easter Egg */}
+      <MusicVinylBadge />
 
       {/* Interactive Command Palette Modal (Cmd + K) */}
       <CommandPalette
