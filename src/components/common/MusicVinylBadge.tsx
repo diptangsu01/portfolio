@@ -28,9 +28,9 @@ export default function MusicVinylBadge() {
       {/* Text Label */}
       <div className="flex flex-col">
         <span className="flex items-center gap-1 font-mono text-xs font-semibold text-slate-200 group-hover:text-amber-300">
-          Curated Sounds <Sparkles className="h-3 w-3 text-amber-400" />
+          🎵 <Sparkles className="h-3 w-3 text-amber-400" />
         </span>
-        <span className="font-mono text-[10px] text-slate-400">music.diptangsu.in ↗</span>
+        {/* <span className="font-mono text-[10px] text-slate-400">music.diptangsu.in ↗</span> */}
       </div>
     </motion.a>
   );
