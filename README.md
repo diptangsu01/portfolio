@@ -1,6 +1,6 @@
 # ⚡ 2050 Minimalist Salesforce Developer & Consultant Portfolio
 
-An ultra-modern, futuristic, high-performance personal portfolio template designed for **Salesforce Developers**, **Technical Consultants**, and **CRM Architects**.
+An ultra-modern, futuristic, high-performance personal portfolio designed for **Salesforce Developers**, **Technical Consultants**, and **CRM Architects**.
 
 Built with **React 19**, **TypeScript**, **Tailwind CSS v4**, **Framer Motion**, and **Vite**.
 
@@ -10,11 +10,13 @@ Live Demo: [https://diptangsu.in](https://diptangsu.in) | GitHub Repository: [ht
 
 ## ✨ Features & Highlights
 
+- **🏢 LinkedIn-Style Company Experience Timeline**: Hierarchical career progression grouped by enterprise companies (Infosys, Wipro) featuring progressive role timelines, bold scannable lead-in bullets, key wins tags (`UK Onsite Lead`, `GCP REST Modernization`, `CloudSense OM`), and expandable role detail drawers.
 - **⚡ `Cmd + K` Salesforce Developer Command Center**: Interactive browser CLI terminal allowing recruiters and interviewers to query certifications, experience, skills, and copy email instantly.
 - **🔍 Interactive Architecture Spec Inspector**: Modal dialog for deep-diving into Apex design patterns, OmniStudio workflows, and platform limits optimizations for every skill badge.
 - **🖥️ 2050 Developer Mode Toggle**: Top-bar switch for toggling between an Executive Portfolio layout and a Live Developer Terminal telemetry overlay.
+- **🎵 Music Portal Integration**: Fixed spinning vinyl audio gateway badge linking directly to [music.diptangsu.in](https://music.diptangsu.in).
 - **🌌 60fps Ambient Background Motion**: Hardware-accelerated floating glow mesh with real-time pointer and touch coordinate light tracking.
-- **📱 Mobile-First Touch Interactions**: Tactile tap feedback (`whileTap`), horizontal swipeable skill categories, and 44px+ minimum touch targets.
+- **📱 Mobile-First Touch & Responsive Controls**: Full-width touch-friendly action buttons (`[+ EXPAND DETAILS]`), adaptive timeline offsets for small screens (`< 640px`), and tactile press feedback (`whileTap`).
 - **🛡️ Enterprise Security Best Practices**: All external links use `rel="noopener noreferrer"` to eliminate reverse tabnabbing; zero unsafe `dangerouslySetInnerHTML` injections.
 - **📦 Modular & High Reusability**: Single-source data schemas (`src/data/*`) making it effortless for any developer to fork and personalize in under 5 minutes.
 
@@ -24,10 +26,10 @@ Live Demo: [https://diptangsu.in](https://diptangsu.in) | GitHub Repository: [ht
 
 | Package | Purpose |
 | :--- | :--- |
-| **[React 19](https://react.dev/)** | Core UI UI library |
+| **[React 19](https://react.dev/)** | Core UI library |
 | **[TypeScript](https://www.typescriptlang.org/)** | Strict type safety and autocomplete |
 | **[Tailwind CSS v4](https://tailwindcss.com/)** | Modern utility-first styling engine |
-| **[Framer Motion](https://www.framer.com/motion/)** | Smooth layout animations, gestures, and ambient floating mesh |
+| **[Framer Motion](https://www.framer.com/motion/)** | Smooth layout animations, accordion drawers, and ambient glowing mesh |
 | **[Lucide React](https://lucide.dev/)** & **[Heroicons](https://heroicons.com/)** | Clean SVG icon suites |
 | **[canvas-confetti](https://www.npmjs.com/package/canvas-confetti)** | Celebration trigger on email copy / contact submission |
 | **[react-type-animation](https://react-type-animation.netlify.app/)** | Hero role typewriter text |
@@ -78,6 +80,7 @@ Portfolio/
 │   │   │   ├── Badge.tsx                # Reusable tech pill badge
 │   │   │   ├── CommandPalette.tsx       # Cmd + K Salesforce CLI terminal
 │   │   │   ├── GlassCard.tsx            # Glassmorphism container
+│   │   │   ├── MusicVinylBadge.tsx      # Curated music portal gateway
 │   │   │   └── SpecInspectorModal.tsx   # Skill architecture modal
 │   │   ├── layout/
 │   │   │   ├── Navbar.tsx               # Header with section tracking & dev mode
@@ -85,14 +88,14 @@ Portfolio/
 │   │   └── sections/
 │   │       ├── Hero.tsx                 # Hero with typewriter subtitle
 │   │       ├── StatsBar.tsx             # Executive metric counters
-│   │       ├── Experience.tsx           # Vertical career timeline
+│   │       ├── Experience.tsx           # Hierarchical company timeline & role drawers
 │   │       ├── Skills.tsx               # Filterable skill matrix
 │   │       ├── Projects.tsx             # Enterprise solution cards
 │   │       ├── Certifications.tsx       # 9x Salesforce certs grid
 │   │       └── Contact.tsx              # Email copy & message form
 │   ├── data/
 │   │   ├── profile.ts                   # Bio, role, social links, stats
-│   │   ├── experience.ts                # Career timeline (Infosys & Wipro)
+│   │   ├── experience.ts                # Hierarchical & flat experience schemas
 │   │   ├── certifications.ts            # 9x Salesforce certifications
 │   │   ├── skills.ts                    # Skill list with architectural specs
 │   │   ├── projects.ts                  # Enterprise project highlights
@@ -104,7 +107,7 @@ Portfolio/
 │   └── main.tsx                         # Entry point
 ├── index.html                           # SEO meta headers & Google Fonts
 ├── package.json                         # Scripts & dependency definitions
-└── README.md                            # Reusability guide
+└── README.md                            # Documentation
 ```
 
 ---
@@ -114,7 +117,7 @@ Portfolio/
 To customize this portfolio for your own credentials and experience, update the files inside `src/data/`:
 
 - **`src/data/profile.ts`**: Update your name, role, bio, and social links.
-- **`src/data/experience.ts`**: Edit your work history, companies, bullet points, and tech stack tags.
+- **`src/data/experience.ts`**: Edit your company hierarchy, progressive roles, bullets, and key wins tags.
 - **`src/data/certifications.ts`**: Update your certifications list and categories.
 - **`src/data/skills.ts`**: Update your technologies, design patterns, and architectural specs.
 - **`src/data/projects.ts`**: Replace project titles, descriptions, and metrics.
@@ -123,16 +126,8 @@ To customize this portfolio for your own credentials and experience, update the 
 
 ## 🌐 One-Click Deployment Options
 
-### Deploying to Cloudflare Workers / Pages
-This repo includes optional Cloudflare Workers configuration:
-```bash
-npm run deploy
-```
-
-### Deploying to Vercel or Netlify
-1. Connect your GitHub repository to Vercel or Netlify.
-2. Set Build Command: `npm run build`
-3. Set Output Directory: `dist`
+### Deploying to Cloudflare Pages
+This repository is connected directly to **Cloudflare Pages** on the `main` branch. Merging commits into `main` automatically triggers a production deployment with zero downtime.
 
 ---
 

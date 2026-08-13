@@ -1,8 +1,8 @@
 export const socials = [
   {
     title: "Email",
-    value: "diptangsu.sasmal@email.com",
-    url: "mailto:diptangsu.sasmal@email.com",
+    value: "diptangsu.sasmal@gmail.com",
+    url: "mailto:diptangsu.sasmal@gmail.com",
     icon: "Mail"
   },
   {

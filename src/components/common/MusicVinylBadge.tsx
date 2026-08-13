@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Disc, Sparkles } from 'lucide-react';
+import { Disc } from 'lucide-react';
 
 export default function MusicVinylBadge() {
   return (
@@ -27,10 +27,10 @@ export default function MusicVinylBadge() {
 
       {/* Text Label */}
       <div className="flex flex-col">
-        <span className="flex items-center gap-1 font-mono text-xs font-semibold text-slate-200 group-hover:text-amber-300">
-          🎵 <Sparkles className="h-3 w-3 text-amber-400" />
+        <span className="flex items-center gap-1 font-mono text-xs font-semibold text-slate-200 group-hover:text-amber-300"> 🎵
+          {/*  <Sparkles className="h-3 w-3 text-amber-400" /> */} {/*  commented for design purpose */}
         </span>
-        {/* <span className="font-mono text-[10px] text-slate-400">music.diptangsu.in ↗</span> */}
+        {/* <span className="font-mono text-[10px] text-slate-400">music.diptangsu.in ↗</span> */} {/*  commented for design purpose */}
       </div>
     </motion.a>
   );

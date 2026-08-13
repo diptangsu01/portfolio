@@ -58,8 +58,8 @@ export default function CommandPalette({ isOpen, onClose }: CommandPaletteProps)
         experiences.map(e => ` • ${e.role} @ ${e.company} (${e.duration})`).join('\n')
       );
     } else if (normalized === 'sf contact' || normalized === 'contact') {
-      navigator.clipboard.writeText(profile.socials?.email || 'diptangsu.sasmal@email.com');
-      setTerminalOutput(`✔ Email copied to clipboard: ${profile.socials?.email || 'diptangsu.sasmal@email.com'}`);
+      navigator.clipboard.writeText(profile.socials?.email || 'diptangsu.sasmal@gmail.com');
+      setTerminalOutput(`✔ Email copied to clipboard: ${profile.socials?.email || 'diptangsu.sasmal@gmail.com'}`);
     } else if (normalized === 'sf profile' || normalized === 'profile') {
       setTerminalOutput(`Executive Summary:\n${profile.description}`);
     } else if (normalized === 'sf play music' || normalized === 'sf music' || normalized === 'music' || normalized === 'play') {
@@ -124,7 +124,7 @@ export default function CommandPalette({ isOpen, onClose }: CommandPaletteProps)
     {
       id: 'contact',
       title: 'sf contact --email',
-      subtitle: 'Copy email (diptangsu.sasmal@email.com) to clipboard',
+      subtitle: 'Copy email (diptangsu.sasmal@gmail.com) to clipboard',
       icon: Mail,
       action: () => {
         executeCommand('sf contact');
@@ -145,7 +145,7 @@ export default function CommandPalette({ isOpen, onClose }: CommandPaletteProps)
 
   const filteredCommands = commandItems.filter(
     item => item.title.toLowerCase().includes(query.toLowerCase()) ||
-            item.subtitle.toLowerCase().includes(query.toLowerCase())
+      item.subtitle.toLowerCase().includes(query.toLowerCase())
   );
 
   return (

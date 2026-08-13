@@ -35,7 +35,7 @@ export const certifications: CertificationItem[] = [
     badgeColor: "indigo",
     accentHex: "#6366f1",
     issuer: "Salesforce",
-    description: "Real-time data ingestion, data modeling, identity resolution, segmentation, and calculated insights within Salesforce Data Cloud."
+    description: "Data ingestion, data modeling, identity resolution, segmentation, data graph and calculated insights within Salesforce Data Cloud."
   },
   {
     id: "agentforce",
@@ -44,7 +44,7 @@ export const certifications: CertificationItem[] = [
     badgeColor: "emerald",
     accentHex: "#10b981",
     issuer: "Salesforce",
-    description: "Autonomous AI agents, prompt engineering, Atlas Reasoning Engine, action triggers, and enterprise AI orchestration."
+    description: "Prompt engineering, Atlas Reasoning Engine, action triggers, and enterprise AI orchestration."
   },
   {
     id: "omnistudio",

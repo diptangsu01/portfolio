@@ -19,7 +19,7 @@ export default function Certifications() {
             9x Certified Salesforce Specialist
           </h2>
           <p className="mt-3 text-sm sm:text-base text-slate-400">
-            Demonstrated mastery across Developer, Data Cloud, Agentforce AI, OmniStudio, and Industry CPQ credentials.
+            Achieved certifications across Apex Development, Service Cloud, Omnistudio, Data Cloud and Agentforce AI.
           </p>
         </div>
 
@@ -46,9 +46,9 @@ export default function Certifications() {
                     {cert.title}
                   </h3>
 
-                  <p className="mt-2 text-xs text-slate-400 leading-relaxed font-sans">
+                  {/* <p className="mt-2 text-xs text-slate-400 leading-relaxed font-sans">
                     {cert.description}
-                  </p>
+                  </p> */}
                 </div>
 
                 <div className="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px] font-mono">

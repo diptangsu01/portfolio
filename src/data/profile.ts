@@ -11,7 +11,7 @@ export const profile = {
     "Salesforce Technical Consultant",
     "Apex & LWC Architecture Specialist",
     "OmniStudio & Industries CPQ Developer",
-    "Data Cloud & Agentforce Specialist"
+    "Data Cloud & Agentforce Developer"
   ],
   experienceYears: "7+",
   certificationsCount: 9,
@@ -33,7 +33,7 @@ export const profile = {
   socials: {
     github: "https://github.com/diptangsu01",
     linkedin: "https://linkedin.com/in/diptangsu-sasmal",
-    email: "diptangsu.sasmal@email.com",
+    email: "diptangsu.sasmal@gmail.com",
     website: "https://diptangsu.in"
   }
 };
