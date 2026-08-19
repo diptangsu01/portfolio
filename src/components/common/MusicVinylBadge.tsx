@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Disc } from 'lucide-react';
+import { Disc, Sparkles } from 'lucide-react';
 
 export default function MusicVinylBadge() {
   return (
