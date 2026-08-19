@@ -72,7 +72,8 @@ export default function Experience() {
               className="inline-flex items-center justify-center gap-2 rounded-xl border border-sky-500/30 bg-slate-900/90 px-4 py-2 text-sky-400 hover:border-sky-400 hover:bg-slate-800 transition-all active:scale-95 shadow-md shadow-sky-500/5 font-mono text-xs w-full sm:w-auto"
             >
               <Layers className="h-3.5 w-3.5 text-sky-400" />
-              <span>{allRolesExpanded ? '[- COLLAPSE ALL DETAILS]' : '[+ EXPAND ALL DETAILS]'}</span>
+              <span>[- COLLAPSE ALL DETAILS]</span>
+              {/* <span>{allRolesExpanded ? '[- COLLAPSE ALL DETAILS]' : '[+ EXPAND ALL DETAILS]'}</span> */}
             </button>
           </div>
         </div>
@@ -80,7 +81,7 @@ export default function Experience() {
         {/* Companies & Roles Stack */}
         <div className="mt-8 sm:mt-16 space-y-6 sm:space-y-10 max-w-5xl mx-auto">
           {companyExperiences.map((company, companyIndex) => {
-            const isCompanyCollapsed = !!collapsedCompanies[company.id];
+            const isCompanyCollapsed = !collapsedCompanies[company.id]; // original = !!collapsedCompanies[company.id];
 
             return (
               <motion.div
