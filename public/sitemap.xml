@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Portfolio pages -->
+  <sitemap>
+    <loc>https://diptangsu.in/sitemap-main.xml</loc>
+  </sitemap>
+  <!-- Blog (served via Cloudflare Worker at /blog*) -->
+  <sitemap>
+    <loc>https://diptangsu.in/blog/sitemap-index.xml</loc>
+  </sitemap>
+</sitemapindex>
